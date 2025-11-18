@@ -1,0 +1,9 @@
+[
+    {
+        "id": 123,
+        "descricao": "fone de ouvido",
+        "preco": 15.0,
+        "estoque": 4,
+        "id_categoria": 1
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "id_venda": 1,
+        "id_produto": 123,
+        "quantidade": 1,
+        "valor_unitario": 15.0
+    }
+]
