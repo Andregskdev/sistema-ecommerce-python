@@ -4,7 +4,7 @@ from src.models.produto import Produto
 
 class ProdutoDAO:
     lista = []
-    arquivo = "data/produtos.json"
+    arquivo = 'data/produtos.json'
 
     @classmethod
     def inserir(cls, obj):
@@ -18,7 +18,8 @@ class ProdutoDAO:
     @classmethod
     def listar_id(cls, id):
         for obj in cls.lista:
-            if obj.id == id: return obj
+            if obj.id == id:
+                return obj
         return None
 
     @classmethod
@@ -39,7 +40,7 @@ class ProdutoDAO:
     def abrir(cls):
         cls.lista = []
         if os.path.exists(cls.arquivo):
-            with open(cls.arquivo, "r") as f:
+            with open(cls.arquivo, 'r') as f:
                 dados = json.load(f)
                 for d in dados:
                     p = Produto()
@@ -48,6 +49,6 @@ class ProdutoDAO:
 
     @classmethod
     def salvar(cls):
-        os.makedirs("data", exist_ok=True)
-        with open(cls.arquivo, "w") as f:
+        os.makedirs('data', exist_ok=True)
+        with open(cls.arquivo, 'w') as f:
             json.dump([vars(obj) for obj in cls.lista], f, indent=4)

@@ -1,9 +1,16 @@
 [
-    {
-        "id": 123,
-        "descricao": "fone de ouvido",
-        "preco": 15.0,
-        "estoque": 4,
-        "id_categoria": 1
-    }
+  {
+    "id": 1,
+    "descricao": "Fone Bluetooth",
+    "preco": 99.9,
+    "estoque": 10,
+    "id_categoria": 1
+  },
+  {
+    "id": 2,
+    "descricao": "Livro Python",
+    "preco": 39.9,
+    "estoque": 5,
+    "id_categoria": 2
+  }
 ]

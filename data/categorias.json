@@ -1,6 +1,10 @@
 [
-    {
-        "id": 1,
-        "descricao": "eletronicos"
-    }
+  {
+    "id": 1,
+    "descricao": "Eletrônicos"
+  },
+  {
+    "id": 2,
+    "descricao": "Livros"
+  }
 ]

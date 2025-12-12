@@ -1,9 +1,16 @@
 [
-    {
-        "id": 1,
-        "id_venda": 1,
-        "id_produto": 123,
-        "quantidade": 1,
-        "valor_unitario": 15.0
-    }
+  {
+    "id": 1,
+    "id_venda": 1,
+    "id_produto": 1,
+    "quantidade": 1,
+    "valor_unitario": 99.9
+  },
+  {
+    "id": 2,
+    "id_venda": 1,
+    "id_produto": 2,
+    "quantidade": 1,
+    "valor_unitario": 39.9
+  }
 ]

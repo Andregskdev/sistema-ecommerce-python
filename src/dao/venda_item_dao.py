@@ -4,7 +4,7 @@ from src.models.venda_item import VendaItem
 
 class VendaItemDAO:
     lista = []
-    arquivo = "data/vendas_itens.json"
+    arquivo = 'data/vendas_itens.json'
 
     @classmethod
     def inserir(cls, obj):
@@ -16,15 +16,20 @@ class VendaItemDAO:
         return [item for item in cls.lista if item.id_venda == id_venda]
 
     @classmethod
+    def listar(cls):
+        return cls.lista
+
+    @classmethod
     def get_proximo_id(cls):
-        if not cls.lista: return 1
+        if not cls.lista:
+            return 1
         return cls.lista[-1].id + 1
 
     @classmethod
     def abrir(cls):
         cls.lista = []
         if os.path.exists(cls.arquivo):
-            with open(cls.arquivo, "r") as f:
+            with open(cls.arquivo, 'r') as f:
                 dados = json.load(f)
                 for d in dados:
                     item = VendaItem()
@@ -33,6 +38,6 @@ class VendaItemDAO:
 
     @classmethod
     def salvar(cls):
-        os.makedirs("data", exist_ok=True)
-        with open(cls.arquivo, "w") as f:
+        os.makedirs('data', exist_ok=True)
+        with open(cls.arquivo, 'w') as f:
             json.dump([vars(obj) for obj in cls.lista], f, indent=4)
